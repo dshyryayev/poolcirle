@@ -1,4 +1,3 @@
-import { Stat } from '@/app/page'
 import { Badge } from '@/components/badge'
 import { Button } from '@/components/button'
 import { Heading, Subheading } from '@/components/heading'
@@ -52,15 +51,6 @@ export default async function Event({ params }: { params: { id: string } }) {
           <Button outline>Edit</Button>
           <Button>View</Button>
         </div>
-      </div>
-      <div className="mt-8 grid gap-8 sm:grid-cols-3">
-        <Stat title="Total revenue" value={event.totalRevenue} change={event.totalRevenueChange} />
-        <Stat
-          title="Tickets sold"
-          value={`${event.ticketsSold}/${event.ticketsAvailable}`}
-          change={event.ticketsSoldChange}
-        />
-        <Stat title="Pageviews" value={event.pageViews} change={event.pageViewsChange} />
       </div>
       <Subheading className="mt-12">Recent orders</Subheading>
       <Table className="mt-4 [--gutter:theme(spacing.6)] lg:[--gutter:theme(spacing.10)]">
