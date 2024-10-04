@@ -39,8 +39,8 @@ export function RefundOrder({ amount, ...props }: { amount: string } & React.Com
             </Field>
             <CheckboxField>
               <Checkbox name="notify" />
-              <Label>Notify customer</Label>
-              <Description>An email notification will be sent to this customer.</Description>
+              <Label>Notify Pool Owner</Label>
+              <Description>An email notification will be sent to this pool owner.</Description>
             </CheckboxField>
           </FieldGroup>
         </DialogBody>

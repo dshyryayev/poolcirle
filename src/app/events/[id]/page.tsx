@@ -58,7 +58,7 @@ export default async function Event({ params }: { params: { id: string } }) {
           <TableRow>
             <TableHeader>Pool number</TableHeader>
             <TableHeader>Event date</TableHeader>
-            <TableHeader>Customer</TableHeader>
+            <TableHeader>Pool Owner</TableHeader>
             <TableHeader className="text-right">Amount</TableHeader>
           </TableRow>
         </TableHead>

@@ -23,7 +23,7 @@ export default async function Pools() {
           <TableRow>
             <TableHeader>Pool number</TableHeader>
             <TableHeader>Event date</TableHeader>
-            <TableHeader>Customer</TableHeader>
+            <TableHeader>Pool Owner</TableHeader>
             <TableHeader>Event</TableHeader>
             <TableHeader className="text-right">Amount</TableHeader>
           </TableRow>

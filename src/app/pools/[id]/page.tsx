@@ -71,7 +71,7 @@ export default async function Pool({ params }: { params: { id: string } }) {
         <Subheading>Summary</Subheading>
         <Divider className="mt-4" />
         <DescriptionList>
-          <DescriptionTerm>Customer</DescriptionTerm>
+          <DescriptionTerm>Pool Owner</DescriptionTerm>
           <DescriptionDetails>{pool.customer.name}</DescriptionDetails>
           <DescriptionTerm>Event</DescriptionTerm>
           <DescriptionDetails>

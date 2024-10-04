@@ -30,7 +30,7 @@ export default async function Home() {
           <TableRow>
             <TableHeader>Pool number</TableHeader>
             <TableHeader>Event date</TableHeader>
-            <TableHeader>Customer</TableHeader>
+            <TableHeader>Pool Owner</TableHeader>
             <TableHeader>Event</TableHeader>
             <TableHeader className="text-right">Amount</TableHeader>
           </TableRow>
