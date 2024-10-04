@@ -29,18 +29,18 @@ export default async function Pools() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {pools.map((order) => (
-            <TableRow key={order.id} href={order.url} title={`Order #${order.id}`}>
-              <TableCell>{order.id}</TableCell>
-              <TableCell className="text-zinc-500">{order.date}</TableCell>
-              <TableCell>{order.customer.name}</TableCell>
+          {pools.map((pool) => (
+            <TableRow key={pool.id} href={pool.url} title={`Pool #${pool.id}`}>
+              <TableCell>{pool.id}</TableCell>
+              <TableCell className="text-zinc-500">{pool.date}</TableCell>
+              <TableCell>{pool.customer.name}</TableCell>
               <TableCell>
                 <div className="flex items-center gap-2">
-                  <Avatar src={order.event.thumbUrl} className="size-6" />
-                  <span>{order.event.name}</span>
+                  <Avatar src={pool.event.thumbUrl} className="size-6" />
+                  <span>{pool.event.name}</span>
                 </div>
               </TableCell>
-              <TableCell className="text-right">US{order.amount.usd}</TableCell>
+              <TableCell className="text-right">US{pool.amount.usd}</TableCell>
             </TableRow>
           ))}
         </TableBody>

@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 
 export default async function Event({ params }: { params: { id: string } }) {
   let event = await getEvent(params.id)
-  let orders = await getEventPools(params.id)
+  let pools = await getEventPools(params.id)
 
   if (!event) {
     notFound()
@@ -52,7 +52,7 @@ export default async function Event({ params }: { params: { id: string } }) {
           <Button>View</Button>
         </div>
       </div>
-      <Subheading className="mt-12">Recent orders</Subheading>
+      <Subheading className="mt-12">Recent pools</Subheading>
       <Table className="mt-4 [--gutter:theme(spacing.6)] lg:[--gutter:theme(spacing.10)]">
         <TableHead>
           <TableRow>
@@ -63,12 +63,12 @@ export default async function Event({ params }: { params: { id: string } }) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {orders.map((order) => (
-            <TableRow key={order.id} href={order.url} title={`Order #${order.id}`}>
-              <TableCell>{order.id}</TableCell>
-              <TableCell className="text-zinc-500">{order.date}</TableCell>
-              <TableCell>{order.customer.name}</TableCell>
-              <TableCell className="text-right">US{order.amount.usd}</TableCell>
+          {pools.map((pool) => (
+            <TableRow key={pool.id} href={pool.url} title={`Pool #${pool.id}`}>
+              <TableCell>{pool.id}</TableCell>
+              <TableCell className="text-zinc-500">{pool.date}</TableCell>
+              <TableCell>{pool.customer.name}</TableCell>
+              <TableCell className="text-right">US{pool.amount.usd}</TableCell>
             </TableRow>
           ))}
         </TableBody>

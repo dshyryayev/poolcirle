@@ -37,7 +37,7 @@ export default async function Home() {
         </TableHead>
         <TableBody>
           {pools.map((pool) => (
-            <TableRow key={pool.id} href={pool.url} title={`Order #${pool.id}`}>
+            <TableRow key={pool.id} href={pool.url} title={`Pool #${pool.id}`}>
               <TableCell>{pool.id}</TableCell>
               <TableCell className="text-zinc-500">{pool.date}</TableCell>
               <TableCell>{pool.customer.name}</TableCell>

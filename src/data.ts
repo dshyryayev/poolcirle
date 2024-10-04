@@ -1,5 +1,5 @@
-export async function getOrder(id: string) {
-  return (await getPools()).find((order) => order.id.toString() === id)!
+export async function getPool(id: string) {
+  return (await getPools()).find((pool) => pool.id.toString() === id)!
 }
 
 export async function getRecentPools() {
@@ -718,7 +718,7 @@ export async function getEvent(id: string) {
 }
 
 export async function getEventPools(id: string) {
-  return (await getPools()).filter((order) => order.event.id.toString() === id)
+  return (await getPools()).filter((pool) => pool.event.id.toString() === id)
 }
 
 export async function getEvents() {
