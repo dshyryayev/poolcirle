@@ -22,7 +22,7 @@ export async function getPools() {
         transactionId: 'ch_2HLf8DfYJ0Db7asfCC5T546TY',
         card: {
           number: '1254',
-          type: 'American Express',
+          type: 'Ethereum',
           expiry: '01 / 2025',
         },
       },
@@ -265,7 +265,7 @@ export async function getPools() {
         transactionId: 'ch_9KLf7DfYJ0Ddb78fas3C5dTY',
         card: {
           number: '3129',
-          type: 'American Express',
+          type: 'Ethereum',
           expiry: '06 / 2025',
         },
       },
@@ -319,7 +319,7 @@ export async function getPools() {
         transactionId: 'ch_2KLf9DfYJ0Db78fas3CC546Y',
         card: {
           number: '1732',
-          type: 'American Express',
+          type: 'Ethereum',
           expiry: '08 / 2024',
         },
       },
@@ -616,7 +616,7 @@ export async function getPools() {
         transactionId: 'ch_4HLf8DfYJ0Db78fas3CC546Y',
         card: {
           number: '8642',
-          type: 'American Express',
+          type: 'Ethereum',
           expiry: '11 / 2026',
         },
       },
@@ -697,7 +697,7 @@ export async function getPools() {
         transactionId: 'ch_7HLf7DfYJ0Db78fas3CC546TY',
         card: {
           number: '9401',
-          type: 'American Express',
+          type: 'Ethereum',
           expiry: '08 / 2025',
         },
       },

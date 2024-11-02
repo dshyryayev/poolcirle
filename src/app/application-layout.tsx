@@ -1,5 +1,12 @@
 'use client'
 
+import {
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
+
 import { Avatar } from '@/components/avatar'
 import {
   Dropdown,
@@ -42,6 +49,7 @@ import {
   TicketIcon,
 } from '@heroicons/react/20/solid'
 import { usePathname } from 'next/navigation'
+import { Button } from '@/components/button'
 
 function AccountDropdownMenu({ anchor }: { anchor: 'top start' | 'bottom end' }) {
   return (
@@ -167,21 +175,12 @@ export function ApplicationLayout({
           </SidebarBody>
 
           <SidebarFooter className="max-lg:hidden">
-            <Dropdown>
-              <DropdownButton as={SidebarItem}>
-                <span className="flex min-w-0 items-center gap-3">
-                  <Avatar src="/users/michael.jpg" className="size-10" square alt="" />
-                  <span className="min-w-0">
-                    <span className="block truncate text-sm/5 font-medium text-zinc-950 dark:text-white">Michael</span>
-                    <span className="block truncate text-xs/5 font-normal text-zinc-500 dark:text-zinc-400">
-                      michael@example.com
-                    </span>
-                  </span>
-                </span>
-                <ChevronUpIcon />
-              </DropdownButton>
-              <AccountDropdownMenu anchor="top start" />
-            </Dropdown>
+            <SignedOut>
+                <SignInButton />
+              </SignedOut>
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
           </SidebarFooter>
         </Sidebar>
       }
