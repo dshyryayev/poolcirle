@@ -174,7 +174,7 @@ export function ApplicationLayout({
             </SidebarSection>
           </SidebarBody>
 
-          <SidebarFooter className="max-lg:hidden">
+          <SidebarFooter className="max-lg:hidden bg-gray-800 rounded-md my-2">
             <SignedOut>
                 <SignInButton />
               </SignedOut>
