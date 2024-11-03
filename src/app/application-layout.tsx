@@ -171,17 +171,17 @@ export function ApplicationLayout({
                 <SparklesIcon />
                 <SidebarLabel>Changelog</SidebarLabel>
               </SidebarItem>
+              <SidebarItem href="#">
+                <SignedOut>
+                  <SignInButton />
+                </SignedOut>
+                <SignedIn>
+                  <UserButton />
+                </SignedIn>
+              </SidebarItem>
             </SidebarSection>
-          </SidebarBody>
 
-          <SidebarFooter className="max-lg:hidden bg-gray-800 rounded-md my-2">
-            <SignedOut>
-                <SignInButton />
-              </SignedOut>
-              <SignedIn>
-                <UserButton />
-              </SignedIn>
-          </SidebarFooter>
+          </SidebarBody>
         </Sidebar>
       }
     >
