@@ -5,14 +5,30 @@ import { Heading, Subheading } from '@/components/heading'
 import { Select } from '@/components/select'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/table'
 import { getRecentPools } from '@/data'
+import { auth, currentUser } from '@clerk/nextjs/server'
 
 
 export default async function Home() {
   let pools = await getRecentPools()
+  
+  let userName = ""
+  const user = await currentUser()
+  if (user) {
+    userName = user.firstName ?? user.username ?? ""
+  }
+
+  let greeting = "Good afternoon"
+  if (new Date().getHours() < 12) {
+    greeting = "Good morning"
+  }
+
+  if (userName) {
+    greeting += ", " + userName
+  }
 
   return (
     <>
-      <Heading>Good afternoon, Michael</Heading>
+      <Heading>{greeting}</Heading>
       <div className="mt-8 flex items-end justify-between">
         <Subheading>Overview</Subheading>
         <div>
